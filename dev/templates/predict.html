@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PBO - EXPO | Kel 5</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <div class="flex h-screen justify-center items-center">
+      <div class="flex-col">
+        <h1 class="font-bold text-xl text-indigo-800">
+          Sneakers Daily Predict Test App
+        </h1>
+        <div class="mt-2 flex">
+          <form action="{% url 'predictprocess' %}" method="post">
+            {% csrf_token %}
+            <div class="mb-4">
+              <label for="ukuran" class="font-bold">Ukuran : </label>
+              <input
+                type="number"
+                placeholder="0 - 7"
+                name="ukuran_field"
+                class="border border-black text-center py-2 rounded-md"
+              />
+            </div>
+
+            <div class="mb-4">
+              <label for="warna" class="font-bold">Warna : </label>
+              <input
+                type="number"
+                id="warna"
+                name="warna_field"
+                placeholder="0 - 13"
+                class="border ms-1 border-black text-center py-2 rounded-md"
+              />
+            </div>
+            <div class="mb-4">
+              <label for="harga" class="font-bold">Harga : </label>
+              <input
+                type="text"
+                placeholder="0"
+                name="harga_field"
+                id="harga"
+                class="border ms-2 border-black text-center py-2 rounded-md"
+              />
+            </div>
+            <div class="mb-4">
+              <label for="kategori" class="font-bold">Kategori : </label>
+              <input
+                type="number"
+                placeholder="0 - 24"
+                name="kategori_field"
+                id="kategori"
+                class="border border-black text-center py-2 rounded-md"
+              />
+            </div>
+            <div class="mb-4">
+              <label for="bahan" class="font-bold">Bahan : </label>
+              <input
+                type="number"
+                placeholder="0 - 1"
+                name="bahan_field"
+                id="bahan"
+                class="border border-black text-center py-2 rounded-md"
+              />
+            </div>
+            <div class="mb-4">
+              <label for="kondisi" class="font-bold">Kondisi : </label>
+              <input
+                type="number"
+                placeholder="0 - 1"
+                name="kondisi_field"
+                id="kondisi"
+                class="border border-black text-center py-2 rounded-md"
+              />
+            </div>
+            <div class="mb-4">
+              <button
+                type="submit"
+                class="w-full bg-green-600 text-white font-bold text-center py-2 rounded-md"
+              >
+                Predict
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
