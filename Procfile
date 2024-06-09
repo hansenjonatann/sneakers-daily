@@ -1,1 +1,1 @@
-web: gunicorn nama_proyek.wsgi:application --log-file -
+web: gunicorn pbo.wsgi:application --log-file -
