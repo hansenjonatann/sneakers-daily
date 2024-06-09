@@ -26,7 +26,9 @@ SECRET_KEY = 'django-insecure-13d9c9p170vpmx(e#2^(6-x+y97p_5=l*1)j^*95qgux6rsaq6
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+  'embarrassed-ninette-sneakersdailyfull-e9ab5288.koyeb.app',
+]
 
 
 # Application definition
